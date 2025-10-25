@@ -1,0 +1,65 @@
+{
+  "name": "yaprax-downloader",
+  "version": "1.0.0",
+  "description": "Yaprax Downloader - A modern wget-based download manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": [
+    "wget",
+    "downloader",
+    "gui",
+    "electron",
+    "yaprax"
+  ],
+  "author": {
+    "name": "Aga Ismael Abdalla",
+    "email": "agaesmaeel@gmail.com",
+    "github": "https://github.com/petrichor-494",
+    "url": "https://linux.krd"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petrichor-494/yaprax-downloader"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "krd.linux.yaprax",
+    "productName": "YapraxDownloader",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Network"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html"
+    ]
+  }
+}
